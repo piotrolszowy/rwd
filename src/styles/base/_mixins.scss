@@ -1,0 +1,24 @@
+// --- Mixins and functions --- //
+
+@mixin breakpoint($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media only screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+
+@mixin make-container() {  //todo
+  @include breakpoint(medium) {
+    max-width: map-get($medium, max-width);
+    margin: 0 auto;
+  }
+  @include breakpoint(large) {
+    max-width: map-get($large, max-width);
+    margin: 0 auto;
+  }
+}
+
+@function flex-item-width($cols, $spacer) {
+  @return calc((100% - #{$spacer * ($cols - 1)}) / #{$cols});  // flex-item-width(3, 1rem) => calc((100% - 2rem) / 3);
+}

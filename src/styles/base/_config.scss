@@ -1,0 +1,38 @@
+// --- RWD --- //
+
+$breakpoints: (
+  small:  0,
+  medium: 640px,
+  large:  1024px
+);
+
+
+// --- Small screen --- //
+
+$small: (
+  top-padding:        1rem,
+  right-left-padding: 1.5rem,
+  bottom-padding:     1rem,
+);
+
+
+// --- Medium screen --- //
+
+$medium: (
+  max-width:          700px,
+  top-padding:        1rem,
+  right-left-padding: 1.5rem,
+  bottom-padding:     1rem,
+  boxes-per-row:      2
+);
+
+
+// --- Large screen --- //
+
+$large: (
+  max-width:          1200px,
+  top-padding:        1rem,
+  right-left-padding: 1.5rem,
+  bottom-padding:     1rem,
+  boxes-per-row:      4
+);

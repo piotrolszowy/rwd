@@ -62,3 +62,84 @@ table {
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
 }
+
+body {
+  background-color: #F4F8FB;
+  color: #282923;
+  font: 400 1rem/1 Roboto, sans-serif;
+}
+
+.page-header {
+  padding: 1rem 1.5rem;
+}
+@media only screen and (min-width: 640px) {
+  .page-header {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.page-header__header {
+  margin-bottom: 1.25rem;
+}
+@media only screen and (min-width: 1024px) {
+  .page-header__header {
+    margin-bottom: 0;
+  }
+}
+.page-header__logo {
+  background: url("https://via.placeholder.com/64") no-repeat;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  .page-header__logo {
+    margin: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1024px) {
+  .nav {
+    margin: 0;
+  }
+}
+.nav__item {
+  display: block;
+  width: calc((100% - 2.25rem) / 4);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .nav__item {
+    width: auto;
+    margin-bottom: 0;
+    margin-left: 4rem;
+  }
+}
+.nav__link {
+  display: block;
+  font-weight: 700;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
