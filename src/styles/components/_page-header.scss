@@ -1,6 +1,7 @@
 .page-header {
   @include make-container();
-  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   @include breakpoint(large) {
     display: flex;
@@ -17,7 +18,7 @@
   }
 
   &__logo {
-    background: url('https://via.placeholder.com/64') no-repeat;
+    background: image-url('64', 'LogoImage') no-repeat;
     display: block;
     width: 4rem;
     height: 4rem;

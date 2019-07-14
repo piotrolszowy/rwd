@@ -70,18 +70,27 @@ body {
 }
 
 .page-header {
-  padding: 1rem 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 @media only screen and (min-width: 640px) {
   .page-header {
     max-width: 700px;
-    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1024px) {
   .page-header {
     max-width: 1200px;
-    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -100,7 +109,7 @@ body {
   }
 }
 .page-header__logo {
-  background: url("https://via.placeholder.com/64") no-repeat;
+  background: url("https://via.placeholder.com/64/282923/F4F8FB/?text=LogoImage") no-repeat;
   display: block;
   width: 4rem;
   height: 4rem;
@@ -142,4 +151,9 @@ body {
   font-weight: 700;
   font-size: .8rem;
   text-transform: uppercase;
+}
+
+.hero {
+  height: 15rem;
+  background: #282923 url("https://via.placeholder.com/1000x200/282923/F4F8FB/?text=HeroImage") no-repeat center bottom;
 }
