@@ -2,7 +2,7 @@
 <html lang="pl-PL">
 <head>
   <meta charset="utf-8">
-  <meta name="keywords" content="HTML, CSS, Sass, SCSS, BEM, RWD">
+  <meta name="keywords" content="HTML, CSS, Sass, BEM, RWD">
   <meta name="description" content="Responsive web design">
   <meta name="author" content="Piotr Olszowy">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,86 @@
 
 <body>
 
+  <header class="page-header">
 
+    <h1 class="page-header__header">
+      <a class="page-header__logo" href="#"></a>
+    </h1>
+
+    <nav class="page-header__nav">
+      <ul class="nav">
+        <li class="nav__item">
+          <a class="nav__link" href="#">First subpage</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Second subpage</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">Next subpage</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#">The last one</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <img class="hero__graphic" src="" alt="Hero graphic">
+    </section>
+
+    <section class="boxes">
+
+      <article class="box">
+        <img class="box__graphic" src="" alt="Box graphic">
+        <div class="box__content">
+          <p class="box__description">
+            Lorem ipsum
+          </p>
+        </div>
+        <div class="box__buttons">
+          <button class="box__button">Order now</button>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="posts">
+      <img class="posts__graphic" src="" alt="Posts graphic">
+      <section class="posts__content">
+
+        <article class="post">
+          <img class="post__graphic" src="" alt="Post graphic">
+          <div class="post__content">
+            <p class="post__description">
+              Lorem ipsum
+            </p>
+          </div>
+        </article>
+
+      </section>
+    </section>
+
+    <section class="about">
+      <img class="about__graphic" src="" alt="About graphic">
+      <p class="about__description">
+        Lectus doris
+      </p>
+    </section>
+    
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <p class="page-footer__paragraph">Lorem</p>
+      <p class="page-footer__paragraph">Lorem</p>
+      <p class="page-footer__paragraph">Lorem</p>
+      <p class="page-footer__paragraph">Lorem</p>
+    </div>
+  </footer>
 
 </body>
 </html>
