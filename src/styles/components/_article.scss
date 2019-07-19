@@ -1,0 +1,26 @@
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+
+  &--last-child {
+    margin-bottom: 0;
+  }
+
+  &__image {
+    background: placeholder-image('96', 'Article') no-repeat;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  &__content {
+    width: calc(100% - 7.5rem);
+  }
+
+  &__paragraph {
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+}

@@ -1,0 +1,36 @@
+.box {
+  @include box-width;
+  border: 0.1rem solid $box-border-color;
+  margin-bottom: 3rem;
+
+  @include breakpoint(medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.9;
+    padding: 0.75rem 1rem 2rem;
+  }
+
+  &__button {
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: $button-bg-color;
+    color: $button-text-color;
+    font-weight: 500;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem .85rem;
+  }
+}

@@ -1,32 +1,81 @@
-// --- RWD --- //
+// --- Breakpoints --- //
 
 $breakpoints: (
-  small:  0,
-  medium: 640px,
-  large:  1024px
+  medium:  640px,
+  large:   1024px,
 );
 
+@mixin breakpoint($screen-size) {
+  @if $screen-size == small {
+    @content;
+  }
+  @else if map-has-key($breakpoints, $screen-size) {
+    @media only screen and (min-width: map-get($breakpoints, $screen-size)) {
+      @content;
+    }
+  }
+}
 
-// --- Small screen --- //
 
-$small: (
-  right-left-padding: 1.5rem,
+// --- Container & Box container --- //
+
+$container-padding: 1.5rem;
+
+$container-max-widths: (
+  medium:  700px,
+  large:   1200px,
 );
 
+$box-container-max-widths: map-merge($container-max-widths, (small: 320px));
 
-// --- Medium screen --- //
+@mixin container-builder($max-widths, $padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+  margin: 0 auto;
+  @each $screen-size, $max-width in $max-widths {
+    @include breakpoint($screen-size) {
+      max-width: $max-width;
+    }
+  }
+}
 
-$medium: (
-  max-width:          700px,
-  right-left-padding: 1.5rem,
-  boxes-per-row:      2
+@mixin make-container {
+  @include container-builder($container-max-widths, $container-padding);
+}
+
+@mixin make-box-container {
+  @include container-builder($box-container-max-widths, $container-padding);
+}
+
+
+// --- Box configuration --- //
+
+$box-config: (
+  medium: ( columns: 2, gutter: 7rem ),
+  large:  ( columns: 4, gutter: 1.5rem ),
 );
 
+@mixin box-width {
+  @each $screen-size, $settings in $box-config {
+    @include breakpoint($screen-size) {
+      width: flex-item-width(map-get($settings, columns), map-get($settings, gutter));
+    }
+  }
+}
 
-// --- Large screen --- //
 
-$large: (
-  max-width:          1200px,
-  right-left-padding: 1.5rem,
-  boxes-per-row:      4
-);
+// --- Functions --- //
+
+@function flex-item-width($columns, $gutter) {
+  @return calc((100% - #{$gutter * ($columns - 1)}) / #{$columns});  // (3, 1rem) => calc((100% - 2rem) / 3);
+}
+
+@function color-to-str($color) {
+  @return str-slice(#{$color}, 2);  // #F4F8FB => 'F4F8FB'
+}
+
+@function placeholder-image($size, $text, $bg-color: $placeholder-bg-color, $text-color: $placeholder-text-color) {
+  $bg-color-str: color-to-str($bg-color);
+  $text-color-str: color-to-str($text-color);
+  @return url('https://via.placeholder.com/#{$size}/#{$bg-color-str}/#{$text-color-str}/?text=#{$text}');
+}

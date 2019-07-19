@@ -1,0 +1,19 @@
+.logo {
+  margin-bottom: 1.25rem;
+
+  @include breakpoint(large) {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    background: placeholder-image('80', 'Logo') no-repeat;
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+
+    @include breakpoint(large) {
+      margin: 0;
+    }
+  }
+}

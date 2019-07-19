@@ -1,0 +1,38 @@
+.page-footer {
+  background: $footer-bg-color;
+
+  &__content {
+    @include make-container;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__column {
+    @include breakpoint(medium) {
+      width: flex-item-width(2, 5rem);
+    }
+
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: flex-item-width(2, 2rem);
+    }
+  }
+
+  &__paragraph {
+    color: $footer-text-color;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+
+    @include breakpoint(large) {
+      width: flex-item-width(2, 2rem);
+    }
+  }
+}

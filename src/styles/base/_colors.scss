@@ -1,28 +1,38 @@
 // --- Color values --- //
 
-$black:       #282923;
-$white:       #FFFFFF;
-
-$light-gray:  #F4F8FB;
-$dark-gray:   #ACBAC6;
-$darker-gray: #626262;
-
-$blue:        #00A4FF;
-$red:         #D2000C;
+$dark-gray:  #282923;
+$light-gray: #F4F8FB;
 
 
 // --- Base --- //
 
-$page-bg-color:    $light-gray;
-$page-text-color:  $black;
-
-
-// --- Placeholder image colors --- //
-
-$image-bg-color:   $black;
-$image-text-color: $light-gray;
+$bg-color:   $light-gray;
+$text-color: $dark-gray;
 
 
 // --- Hero --- //
 
-$hero-bg-color:    $black;
+$hero-bg-color: $dark-gray;
+
+
+// --- Box --- //
+
+$box-border-color: $dark-gray;
+
+
+// --- Button --- //
+
+$button-bg-color:   $dark-gray;
+$button-text-color: $light-gray;
+
+
+// --- Footer --- //
+
+$footer-bg-color:   $dark-gray;
+$footer-text-color: $light-gray;
+
+
+// --- Placeholder image --- //
+
+$placeholder-bg-color:   $dark-gray;
+$placeholder-text-color: $light-gray;
